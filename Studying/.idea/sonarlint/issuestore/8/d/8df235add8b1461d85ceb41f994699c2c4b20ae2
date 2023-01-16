@@ -1,0 +1,11 @@
+
+X
+java:S2094"BRemove this empty class, write its code or make it an "interface".(ÿ±ÃÛ
+V
+java:S1854"9Remove this useless assignment to local variable "list2".(öâ©¼8‘ğØÛ0
+V
+java:S1854"9Remove this useless assignment to local variable "list1".(Š·‡ë8‘ğØÛ0
+G
+java:S1481"*Remove this unused "list1" local variable.(Š·‡ë8’ğØÛ0
+G
+java:S1481"*Remove this unused "list2" local variable.(öâ©¼8œáğØÛ0
