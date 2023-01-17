@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @Author: patient.fyd@gmail.com
- * @Description:
+ * @Description: 删除字符串s1中含有s2字符串的部分
  * @DateTime: 2023/1/18 4:10
  */
 public class Test2 {

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @Author: patient.fyd@gmail.com
- * @Description:
+ * @Description: 杨辉三角
  * @DateTime: 2023/1/18 3:39
  */
 public class Test1 {
