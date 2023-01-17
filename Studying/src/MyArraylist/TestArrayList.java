@@ -26,6 +26,10 @@ public class TestArrayList {
             System.out.println(it.next()+" ");
         }
 
+        for (Integer integer : arrayList) {
+            System.out.println(integer + " ");
+        }
+
         // 删除下标为2的元素
         arrayList.remove(2);
         // 删除数据为99的元素

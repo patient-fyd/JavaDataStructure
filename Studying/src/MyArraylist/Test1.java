@@ -8,7 +8,7 @@ import java.util.List;
  * @Description:
  * @DateTime: 2023/1/18 3:39
  */
-public class Yanghuisanjiao {
+public class Test1 {
     public List<List<Integer>> generate(int numRows) {
 
         List<List<Integer>> ret = new ArrayList<>();
