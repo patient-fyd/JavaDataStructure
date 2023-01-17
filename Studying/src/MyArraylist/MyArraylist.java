@@ -63,6 +63,7 @@ public class MyArraylist {
         if(!checkPosInAdd(pos)) {
             throw new MyArrayListIndexOutOfException("添加方法的pos不合理");
         }
+
         if (isFull()){
             this.elem = Arrays.copyOf(this.elem,2*this.elem.length);
         }
@@ -125,12 +126,19 @@ public class MyArraylist {
     }
 
     /**
-     * 给 pos 位置的元素设为 value
+     * 给 pos 位置的元素更新为 value
      * @param pos
      * @param value
      */
     public void set(int pos, int value) {
+        if (!checkPosInGet(pos)) {
+            throw new MyArrayListIndexOutOfException("更新pos下标的元素，位置不合法");
+        }
+        if (isEmpty()) {
+            throw new MyArrayListEmptyException("顺序表为空！");
+        }
 
+        this.elem[pos] = value;
     }
 
     /**
@@ -138,7 +146,23 @@ public class MyArraylist {
      * @param toRemove
      */
     public void remove(int toRemove) {
+        if (isEmpty()) {
+            throw new MyArrayListEmptyException("顺序表为空，无法删除");
+        }
+        int temp = isHave(toRemove);
+        for (int i = temp; i < usedSize-1; i++) {
+            this.elem[i] = this.elem[i+1];
+        }
+        usedSize--;
+    }
 
+    private int isHave(int toRemove) {
+        for (int i = 0; i < this.usedSize; i++) {
+            if (get(i) == toRemove) {
+                return i;
+            }
+        }
+        throw new MyArrayListIndexOutOfException("找不到要删除的数据");
     }
 
     /**
