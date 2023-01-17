@@ -149,21 +149,18 @@ public class MyArraylist {
         if (isEmpty()) {
             throw new MyArrayListEmptyException("顺序表为空，无法删除");
         }
-        int temp = isHave(toRemove);
-        for (int i = temp; i < usedSize-1; i++) {
+        int index = indexOf(toRemove);
+        if(index == -1) {
+            System.out.println("不存在你要删除的数据");
+            return;
+        }
+        for (int i = index; i < usedSize-1; i++) {
             this.elem[i] = this.elem[i+1];
         }
-        usedSize--;
+        this.usedSize--;
+        this.elem[usedSize] = 0;
     }
 
-    private int isHave(int toRemove) {
-        for (int i = 0; i < this.usedSize; i++) {
-            if (get(i) == toRemove) {
-                return i;
-            }
-        }
-        throw new MyArrayListIndexOutOfException("找不到要删除的数据");
-    }
 
     /**
      * 获取顺序表长度
