@@ -11,6 +11,14 @@ import java.util.List;
 public class Test2 {
 
     public static List<Character> func(String s1,String s2) {
+
+        if (s1 == null || s2 == null) {
+            return null;
+        }
+        if (s1.length() == 0 || s2.length() == 0) {
+            return null;
+        }
+
         List<Character> result = new ArrayList<>();
         for (int i = 0; i < s1.length(); i++) {
             char ch = s1.charAt(i);
