@@ -1,6 +1,7 @@
 package MyArraylist;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * @Author: patient.fyd@gmail.com
@@ -19,6 +20,11 @@ public class TestArrayList {
         arrayList.add(5);
         System.out.println(arrayList);
 
+        System.out.println("==========使用迭代器遍历打印===============");
+        Iterator<Integer> it = arrayList.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next()+" ");
+        }
 
         // 删除下标为2的元素
         arrayList.remove(2);
