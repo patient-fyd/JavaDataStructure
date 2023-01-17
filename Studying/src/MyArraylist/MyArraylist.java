@@ -22,14 +22,14 @@ public class MyArraylist {
      */
     public void display() {
         for (int i = 0; i < this.usedSize; i++) {
-            System.out.println(this.elem[i]+" ");
+            System.out.print(this.elem[i]+" ");
         }
         System.out.println();
     }
 
     /**
      * 新增元素,默认在数组最后新增
-     * @param data
+     * @param data 默认在末尾添加的数据
      */
     public void add(int data) {
         //1、判断是否是满的，满的要进行扩容
@@ -56,8 +56,11 @@ public class MyArraylist {
         }
         return true;
     }
+
     /**
-     * 在 pos 位置新增元素
+     *
+     * @param pos 在pos下标上
+     * @param data 添加data数据
      */
     public void add(int pos, int data) {
         if(!checkPosInAdd(pos)) {
@@ -75,8 +78,11 @@ public class MyArraylist {
         this.elem[pos] = data;
         this.usedSize++;
     }
+
     /**
      * 判定是否包含某个元素
+     * @param toFind 要判断的元素
+     * @return 包含：true,不包含：false
      */
     public boolean contains(int toFind) {
 
@@ -87,8 +93,11 @@ public class MyArraylist {
         }
         return false;
     }
+
     /**
      * 查找某个元素对应的位置
+     * @param toFind 查找的元素
+     * @return 找到了返回下标，没找到返回-1
      */
     public int indexOf(int toFind) {
         for (int i = 0; i < this.usedSize; i++) {
@@ -108,8 +117,8 @@ public class MyArraylist {
     }
     /**
      * 获取 pos 位置的元素
-     * @param pos
-     * @return
+     * @param pos 获取数据的下标
+     * @return 返回pos上面的元素数据
      */
     public int get(int pos) {
         if (!checkPosInGet(pos)) {
@@ -127,15 +136,15 @@ public class MyArraylist {
 
     /**
      * 给 pos 位置的元素更新为 value
-     * @param pos
-     * @param value
+     * @param pos 要更新数据的下标
+     * @param value 更新替换的数据
      */
     public void set(int pos, int value) {
         if (!checkPosInGet(pos)) {
             throw new MyArrayListIndexOutOfException("更新pos下标的元素，位置不合法");
         }
         if (isEmpty()) {
-            throw new MyArrayListEmptyException("顺序表为空！");
+            throw new MyArrayListEmptyException("顺序表为空!");
         }
 
         this.elem[pos] = value;
@@ -143,7 +152,7 @@ public class MyArraylist {
 
     /**
      * 删除第一次出现的关键字key
-     * @param toRemove
+     * @param toRemove 要删除的数据
      */
     public void remove(int toRemove) {
         if (isEmpty()) {
@@ -161,20 +170,20 @@ public class MyArraylist {
         this.elem[usedSize] = 0;
     }
 
-
     /**
      * 获取顺序表长度
-     * @return
+     * @return 返回长度
      */
     public int size() {
-        return 0;
+        return this.usedSize;
     }
 
     /**
      * 清空顺序表
      */
     public void clear() {
-
+        // 如果是引用类型，要一个一个遍历置空
+        this.usedSize = 0;
     }
 
 }
