@@ -93,10 +93,30 @@ public class Test3 {
 
     public static void main(String[] args) {
         List<Card> cardList = buyCard();
-        System.out.println(cardList);
-
+        System.out.println("买来的牌" + cardList);
         shuffle(cardList);
+        System.out.println("洗牌之后" + cardList);
 
-        System.out.println(cardList);
+        List<Card> hand1 = new ArrayList<>();
+        List<Card> hand2 = new ArrayList<>();
+        List<Card> hand3 = new ArrayList<>();
+
+        List<List<Card>> hands = new ArrayList<>();
+        hands.add(hand1);
+        hands.add(hand2);
+        hands.add(hand3);
+
+        // 三个人轮流抓5张牌
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 3; j++) {
+                // 每次抓牌都去获取cardList的0下标的元素（删除）
+                Card card = cardList.remove(0);
+                hands.get(j).add(i,card);
+            }
+        }
+        System.out.println("第一个人的牌：" + hand1);
+        System.out.println("第二个人的牌：" + hand2);
+        System.out.println("第三个人的牌：" + hand3);
+        System.out.println("剩余的牌：" + cardList);
     }
 }
