@@ -1,6 +1,5 @@
 package MyList;
 
-import java.util.List;
 
 /**
  * @Author: patient.fyd@gmail.com
@@ -62,16 +61,48 @@ public class MySingleList {
         if (head == null) {
             head = node;
         } else {
-            ListNode cur = this.head;
-            while (cur != null) {
+            ListNode cur = head;
+            while (cur.next != null) {
                 cur = cur.next;
             }
             cur.next = node;
         }
     }
-    //任意位置插入,第一个数据节点为0号下标
-    public boolean addIndex(int index,int data){
-        return false;
+
+    /**
+     * 任意位置插入,第一个数据节点为0号下标
+     * @param index 要插入数据的位置
+     * @param data 要插入的数据
+     * @return
+     */
+    public void addIndex(int index,int data){
+        checkIndexAdd(index);
+        if (index == 0) {
+            addFirst(data);
+            return;
+        }
+        if (index == size()) {
+            addLast(data);
+            return;
+        }
+        ListNode node = new ListNode(data);
+        // 找到index-1的节点，要插入的位置要知道上一个位置的next
+        ListNode cur = this.head;
+        for (int i = 0; i < index-1; i++) {
+            cur = cur.next;
+        }
+        node.next = cur.next;
+        cur.next = node;
+    }
+
+    /**
+     * 检查插入位置的合法性
+     * @param index 要插入的位置
+     */
+    private void checkIndexAdd(int index) {
+        if (index < 0 || index > size()) {
+            throw new MySingleListIndexOutOfException("插入位置不合法");
+        }
     }
 
     /**
@@ -91,8 +122,10 @@ public class MySingleList {
     }
     //删除第一次出现关键字为key的节点
     public void remove(int key){
-
     }
+
+
+
     //删除所有值为key的节点
     public void removeAllKey(int key){
 

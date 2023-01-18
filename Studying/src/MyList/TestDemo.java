@@ -11,6 +11,8 @@ public class TestDemo {
 
         mySingleList.createList();
         mySingleList.display();
+        mySingleList.addIndex(4,99);
+        mySingleList.display();
 
     }
 }
