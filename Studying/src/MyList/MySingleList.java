@@ -79,16 +79,26 @@ public class MySingleList {
     public void removeAllKey(int key){
 
     }
-    //得到单链表的长度
-    public int size(){
 
+    /**
+     * 得到单链表的长度
+     * @return 返回单链表的长度
+     */
+    public int size(){
+        int count = 0;
+        ListNode cur = this.head;
+        while (cur != null) {
+            count++;
+            cur = cur.next;
+        }
+        return count;
     }
 
     public void clear(){
 
     }
     public void display() {
-        ListNode cur = head;
+        ListNode cur = this.head;
         while (cur != null) {
             System.out.print(cur.value+" ");
             cur = cur.next;
