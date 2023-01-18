@@ -43,17 +43,35 @@ public class MySingleList {
         this.head = listNode1;
     }
 
-    //头插法
+    /**
+     * 头插法，在链表的头部插入数据
+     * @param data 要插入的数据
+     */
     public void addFirst(int data){
-
+        ListNode node = new ListNode(data);
+        node.next = head;
+        head = node;
     }
-    //尾插法
-    public void addLast(int data){
 
+    /**
+     * 尾插法，在链表的尾部插入数据
+     * @param data 要插入的数据
+     */
+    public void addLast(int data){
+        ListNode node = new ListNode(data);
+        if (head == null) {
+            head = node;
+        } else {
+            ListNode cur = this.head;
+            while (cur != null) {
+                cur = cur.next;
+            }
+            cur.next = node;
+        }
     }
     //任意位置插入,第一个数据节点为0号下标
     public boolean addIndex(int index,int data){
-
+        return false;
     }
 
     /**
