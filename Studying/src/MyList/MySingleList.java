@@ -73,7 +73,6 @@ public class MySingleList {
      * 任意位置插入,第一个数据节点为0号下标
      * @param index 要插入数据的位置
      * @param data 要插入的数据
-     * @return
      */
     public void addIndex(int index,int data){
         checkIndexAdd(index);
@@ -120,13 +119,37 @@ public class MySingleList {
         }
         return false;
     }
-    //删除第一次出现关键字为key的节点
+
+    /**
+     * 删除第一次出现关键字为key的节点
+     * @param key 删除的数据
+     */
     public void remove(int key){
+
+        if (this.head == null) {
+            System.out.println("链表为空，不能删除！");
+            return;
+        }
+        if(this.head.value == key) {
+            this.head = this.head.next;
+            return;
+        }
+        ListNode cur = this.head;
+        while (cur.next != null) {
+            if(cur.next.value == key) {
+                ListNode del = cur.next;
+                cur.next = del.next;
+                return;
+            }
+            cur = cur.next;
+        }
     }
 
 
-
-    //删除所有值为key的节点
+    /**
+     * 删除所有值为key的节点
+     * @param key 要删除的数据
+     */
     public void removeAllKey(int key){
 
     }
