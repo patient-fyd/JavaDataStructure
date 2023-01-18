@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * @Author: patient.fyd@gmail.com
- * @Description:
- * @DateTime: 2023/1/18 20:58
- */
 
 /**
  * 创建扑克牌类
@@ -44,8 +39,11 @@ class Card {
     }
 }
 
-
-
+/**
+ * @Author: patient.fyd@gmail.com
+ * @Description:
+ * @DateTime: 2023/1/18 20:58
+ */
 public class Test3 {
 
     public static final String[] SUITS = {"♥","♠","♣","♦"};
@@ -109,7 +107,7 @@ public class Test3 {
         // 三个人轮流抓5张牌
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 3; j++) {
-                // 每次抓牌都去获取cardList的0下标的元素（删除）
+                // 每次抓牌都去获取cardList的0下标的元素（删除），remove返回删除的元素
                 Card card = cardList.remove(0);
                 hands.get(j).add(i,card);
             }
