@@ -43,4 +43,13 @@ public class MySingleList {
         this.head = listNode1;
     }
 
+    public void display() {
+        ListNode cur = head;
+        while (cur != null) {
+            System.out.print(cur.value+" ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
+
 }

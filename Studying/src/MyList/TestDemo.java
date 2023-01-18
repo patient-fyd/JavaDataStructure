@@ -10,7 +10,7 @@ public class TestDemo {
         MySingleList mySingleList = new MySingleList();
 
         mySingleList.createList();
-        System.out.println("--------------------------");
+        mySingleList.display();
 
     }
 }
