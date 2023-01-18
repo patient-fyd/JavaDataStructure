@@ -45,7 +45,7 @@ public class MySingleList {
 
     //头插法
     public void addFirst(int data){
-        
+
     }
     //尾插法
     public void addLast(int data){
@@ -55,9 +55,21 @@ public class MySingleList {
     public boolean addIndex(int index,int data){
 
     }
-    //查找是否包含关键字key是否在单链表当中
-    public boolean contains(int key){
 
+    /**
+     * 查找是否包含关键字key是否在单链表当中
+     * @param key 要去查找的关键字
+     * @return 找到了返回ture
+     */
+    public boolean contains(int key){
+        ListNode cur = this.head;
+        while (cur != null) {
+            if(cur.value == key) {
+                return true;
+            }
+            cur = cur.next;
+        }
+        return false;
     }
     //删除第一次出现关键字为key的节点
     public void remove(int key){
