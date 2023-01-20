@@ -152,6 +152,23 @@ public class MySingleList {
      */
     public void removeAllKey(int key){
 
+        if (head == null) {
+            return;
+        }
+        ListNode cur = this.head.next;
+        ListNode prev = this.head;
+
+        while (cur != null) {
+            if (cur.value == prev.value) {
+                prev.next = cur.next;
+            } else {
+                prev = cur;
+                cur = cur.next;
+            }
+        }
+        if (this.head.value == key){
+            head = head.next;
+        }
     }
 
     /**
