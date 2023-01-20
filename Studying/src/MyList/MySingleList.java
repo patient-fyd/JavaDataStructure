@@ -159,7 +159,7 @@ public class MySingleList {
         ListNode prev = this.head;
 
         while (cur != null) {
-            if (cur.value == prev.value) {
+            if (cur.value == key) {
                 prev.next = cur.next;
             } else {
                 prev = cur;
