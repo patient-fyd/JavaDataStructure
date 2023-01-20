@@ -3,7 +3,7 @@ package MyList;
 
 /**
  * @Author: patient.fyd@gmail.com
- * @Description:
+ * @Description: 实现链表的基本操作
  * @DateTime: 2023/1/19 0:25
  */
 public class MySingleList {
@@ -185,9 +185,24 @@ public class MySingleList {
         return count;
     }
 
+    /**
+     * 回收链表的所有的节点
+     */
     public void clear(){
-
+        //this.head = null; //比较粗暴
+        ListNode cur = this.head;
+        ListNode curNext = null;
+        while (cur != null) {
+            curNext = cur.next;
+            cur.next = null;
+            cur = curNext;
+        }
+        head = null;
     }
+
+    /**
+     * 打印链表
+     */
     public void display() {
         ListNode cur = this.head;
         while (cur != null) {
