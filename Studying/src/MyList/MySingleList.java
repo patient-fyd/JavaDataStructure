@@ -214,7 +214,7 @@ public class MySingleList {
 
     /**
      * 反转链表，返回一个新头节点
-     * @return
+     * @return 返回头节点
      */
     public ListNode reverseList() {
         if(head == null) {
@@ -252,8 +252,8 @@ public class MySingleList {
 
     /**
      * 输入一个链表，输出该链表中倒数第k个结点
-     * @param k
-     * @return
+     * @param k 返回倒数的节点
+     * @return 返回倒数的节点
      */
     public ListNode FindKthToTail(int k) {
         if (k <= 0) {
