@@ -200,6 +200,7 @@ public class MySingleList {
         head = null;
     }
 
+    
     /**
      * 打印链表
      */
