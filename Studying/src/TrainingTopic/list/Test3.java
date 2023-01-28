@@ -4,7 +4,7 @@ import TrainingTopic.list.ListNode;
 
 /**
  * @Author: patient.fyd@gmail.com
- * @Description:
+ * @Description: 给定一个头结点为 head 的非空单链表，返回链表的中间结点。
  * @DateTime: 2023/1/28 16:44
  */
 public class Test3 {

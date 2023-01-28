@@ -4,15 +4,11 @@ import TrainingTopic.list.ListNode;
 
 /**
  * @Author: patient.fyd@gmail.com
- * @Description:
+ * @Description: 输入一个链表，输出该链表中倒数第k个结点
  * @DateTime: 2023/1/28 16:38
  */
 public class Test2 {
-    /**
-     * 输入一个链表，输出该链表中倒数第k个结点
-     * @param k 返回倒数的节点
-     * @return 返回倒数的节点
-     */
+
     public ListNode FindKthToTail(ListNode head, int k) {
         if (k <= 0) {
             return null;
