@@ -213,27 +213,7 @@ public class MySingleList {
         System.out.println();
     }
 
-    /**
-     * 反转链表，返回一个新头节点
-     * @return 返回头节点
-     */
-    public ListNode reverseList() {
-        if(head == null) {
-            return null;
-        }
-        if (head.next == null) {
-            return head;
-        }
-        ListNode cur = head.next;
-        head.next = null;
-        while (cur != null) {
-            ListNode curNext = cur.next;
-            cur.next = head;
-            head = cur;
-            cur = curNext;
-        }
-        return head;
-    }
+
 
 
     /**
