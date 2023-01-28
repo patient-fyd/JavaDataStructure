@@ -5,7 +5,7 @@ package TrainingTopic;
  * @Description: 反转链表，返回一个新头节点
  * @DateTime: 2023/1/28 14:08
  */
-public class Test1 extends ListNode {
+public class Test1 {
     /**
      * @param head 头节点
      * @return 返回新的头节点
