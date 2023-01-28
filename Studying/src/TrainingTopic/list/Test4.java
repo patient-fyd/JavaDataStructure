@@ -1,4 +1,6 @@
-package TrainingTopic;
+package TrainingTopic.list;
+
+import TrainingTopic.list.ListNode;
 
 /**
  * @Author: patient.fyd@gmail.com

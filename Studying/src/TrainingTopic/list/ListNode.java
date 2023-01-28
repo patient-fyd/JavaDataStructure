@@ -1,4 +1,4 @@
-package TrainingTopic;
+package TrainingTopic.list;
 
 /**
  * @Author: patient.fyd@gmail.com
