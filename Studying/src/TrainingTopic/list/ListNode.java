@@ -5,7 +5,7 @@ package TrainingTopic.list;
  * @Description:
  * @DateTime: 2023/1/28 14:10
  */
-public class ListNode {
+class ListNode {
     int val;
     ListNode next;
     ListNode() {
