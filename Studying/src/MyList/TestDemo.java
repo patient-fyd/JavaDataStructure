@@ -9,10 +9,10 @@ public class TestDemo {
     public static void main(String[] args) {
         MySingleList mySingleList = new MySingleList();
 
-        mySingleList.createList();
-        mySingleList.display();
+        MySingleList.ListNode head = mySingleList.createList();
+        mySingleList.display(head);
         mySingleList.addIndex(4,99);
-        mySingleList.display();
+        mySingleList.display(head);
 
     }
 }

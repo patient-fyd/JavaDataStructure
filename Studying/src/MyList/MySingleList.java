@@ -27,7 +27,7 @@ public class MySingleList {
     /**
      * 这里只是简单的进行链表的构造
      */
-    public void createList() {
+    public ListNode createList() {
         ListNode listNode1 = new ListNode(12);
         ListNode listNode2 = new ListNode(17);
         ListNode listNode3 = new ListNode(22);
@@ -40,6 +40,7 @@ public class MySingleList {
         listNode4.next = listNode5;
 
         this.head = listNode1;
+        return head;
     }
 
     /**
@@ -204,8 +205,8 @@ public class MySingleList {
     /**
      * 打印链表
      */
-    public void display() {
-        ListNode cur = this.head;
+    public void display(ListNode newHead) {
+        ListNode cur = newHead;
         while (cur != null) {
             System.out.print(cur.value+" ");
             cur = cur.next;
