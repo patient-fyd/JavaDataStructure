@@ -7,6 +7,7 @@ package TrainingTopic.list;
  */
 public class Test6 {
     public boolean chkPalindrome(ListNode head) {
+
         if (head == null) {
             return false;
         }
