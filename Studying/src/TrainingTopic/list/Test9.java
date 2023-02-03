@@ -6,5 +6,8 @@ package TrainingTopic.list;
  * @DateTime: 2023/1/31 23:28
  */
 public class Test9 {
+    public static void main(String[] args) {
+        
+    }
 
 }
