@@ -8,7 +8,7 @@ package TrainingTopic.list;
 public class Test9 {
     public static void main(String[] args) {
         System.out.println("llll");
-        System.out.println();
+        System.out.println(1+2);
     }
 
 }
