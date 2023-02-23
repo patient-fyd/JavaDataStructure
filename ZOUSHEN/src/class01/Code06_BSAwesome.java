@@ -1,5 +1,8 @@
 package class01;
 
+/**
+ * 局部最小
+ */
 public class Code06_BSAwesome {
 
 	public static int getLessIndex(int[] arr) {
