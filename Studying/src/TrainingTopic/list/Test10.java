@@ -7,6 +7,26 @@ package TrainingTopic.list;
  */
 public class Test10 {
     public ListNode detectCycle(ListNode head) {
+        if(head == null) return null;
+        ListNode fast = head;
+        ListNode slow = head;
 
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow){
+                break;
+            }
+        }
+        //到这里后有两种情况。1、不满足循环条件【说明没有环】 2、遇到了break【说明有环】
+        if (fast == null || fast.next == null){
+            return null;
+        }
+        slow = head;
+        while(slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
     }
 }
