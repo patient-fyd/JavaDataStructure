@@ -7,7 +7,9 @@ package TrainingTopic.list;
  */
 public class Test10 {
     public ListNode detectCycle(ListNode head) {
-        if(head == null) return null;
+        if(head == null) {
+            return null;
+        }
         ListNode fast = head;
         ListNode slow = head;
 
