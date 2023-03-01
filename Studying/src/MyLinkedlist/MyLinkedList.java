@@ -120,7 +120,22 @@ public class MyLinkedList {
     
     //删除第一次出现关键字为key的节点
     public void remove(int key){
-
+        ListNode cur = head;
+        while(cur.next != null){
+            if (cur.val == key){
+                //判断当前是不是头节点
+                if (cur == head){
+                    head = head.next;
+                    head.prev = null;
+                }else {
+                    cur.prev.next = cur.next;
+                    cur.next.prev = cur.prev;
+                }
+                return;
+            }else{
+                cur = cur.next;
+            }
+        }
     }
     //删除所有值为key的节点
     public void removeAllKey(int key){
