@@ -117,11 +117,14 @@ public class MyLinkedList {
         }
         return false;
     }
-    
-    //删除第一次出现关键字为key的节点
+
+    /**
+     * 删除第一次出现关键字为key的节点
+     * @param key 要删除的关键字
+     */
     public void remove(int key){
         ListNode cur = head;
-        while(cur.next != null){
+        while(cur != null){
             if (cur.val == key){
                 //判断当前是不是头节点
                 if (cur == head){
@@ -129,7 +132,11 @@ public class MyLinkedList {
                     head.prev = null;
                 }else {
                     cur.prev.next = cur.next;
-                    cur.next.prev = cur.prev;
+                    if (cur.next != null) {
+                        cur.next.prev = cur.prev;
+                    } else {
+                        last = last.prev;
+                    }
                 }
                 return;
             }else{
