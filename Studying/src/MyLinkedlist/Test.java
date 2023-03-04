@@ -15,6 +15,7 @@ public class Test {
         myLinkedList.display();
         System.out.println("-----------------------");
         myLinkedList.remove(5);
+        myLinkedList.remove(4);
         myLinkedList.display();
 
     }
