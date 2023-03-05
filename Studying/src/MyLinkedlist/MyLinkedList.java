@@ -144,9 +144,32 @@ public class MyLinkedList {
             }
         }
     }
-    //删除所有值为key的节点
-    public void removeAllKey(int key){
 
+    /**
+     * 删除所有值为key的节点
+     * @param key 要删除的值
+     */
+    public void removeAllKey(int key){
+        ListNode cur = head;
+        while(cur != null){
+            if (cur.val == key){
+                //判断当前是不是头节点
+                if (cur == head){
+                    head = head.next;
+                    head.prev = null;
+                }else {
+                    cur.prev.next = cur.next;
+                    if (cur.next != null) {
+                        cur.next.prev = cur.prev;
+                    } else {
+                        last = last.prev;
+                    }
+                }
+                cur = cur.next;
+            }else{
+                cur = cur.next;
+            }
+        }
     }
 
     /**
@@ -164,7 +187,15 @@ public class MyLinkedList {
     }
 
     public void clear(){
-
+        ListNode cur = head;
+        while(cur != null){
+            ListNode curNext = cur.next;
+            cur.prev = null;
+            cur.next = null;
+            cur = curNext;
+        }
+        head = null;
+        last = null;
     }
 
 }
