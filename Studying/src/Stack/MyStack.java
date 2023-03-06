@@ -35,5 +35,23 @@ public class MyStack {
         return usedSize == elem.length;
     }
 
-    
+    /**
+     * 出栈
+     * @return
+     */
+    public int pop() {
+        if (empty()) {
+            throw new RuntimeException("栈为空");
+        }
+        int ret = elem[usedSize-1];
+        // 如果是引用类型的时候，要把它置为空
+        usedSize--;
+        return ret;
+    }
+
+    private boolean empty() {
+        return usedSize == 0;
+    }
+
+
 }
