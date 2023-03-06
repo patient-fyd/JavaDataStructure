@@ -1,6 +1,8 @@
 package MyList;
 
 
+import java.util.Stack;
+
 /**
  * @Author: patient.fyd@gmail.com
  * @Description: 实现链表的基本操作
@@ -214,5 +216,40 @@ public class MySingleList {
         System.out.println();
     }
 
+    /**
+     * 逆序递归打印链表
+     * @param head 输入链表
+     */
+    public void display1(ListNode head){
+        if(head == null){
+            return;
+        }
+        if(head.next == null){
+            System.out.println(head.value);
+            return;
+        }
+        display1(head.next);
+        System.out.println(head.value);
+    }
+
+    /**
+     * 用栈打印链表
+     * @param head
+     */
+    public void display2(ListNode head){
+        if(head == null){
+            return;
+        }
+        Stack<ListNode> stack = new Stack<>();
+        ListNode cur = head;
+        while(cur != null){
+            stack.push(cur);
+            cur = cur.next;
+        }
+        while (!stack.empty()){
+            ListNode p = stack.pop();
+            System.out.println(p.value);
+        }
+    }
 
 }
