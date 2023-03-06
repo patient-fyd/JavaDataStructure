@@ -1,5 +1,7 @@
 package MyLinkedlist;
 
+import java.util.LinkedList;
+
 /**
  * @Author: patient.fyd@gmail.com
  * @Description:
@@ -17,7 +19,9 @@ public class Test {
         myLinkedList.remove(5);
         myLinkedList.remove(4);
         myLinkedList.display();
+        System.out.println("-----------------------");
 
     }
 
 }
+
