@@ -9,7 +9,7 @@ import java.util.Stack;
  */
 public class Test {
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
+        MyStack<Integer> stack = new MyStack<>();
         // 入栈
         stack.push(12);
         stack.push(23);
@@ -24,5 +24,6 @@ public class Test {
         x = stack.pop();
         System.out.println(x);
         boolean flg = stack.empty();
+        System.out.println(flg);
     }
 }
