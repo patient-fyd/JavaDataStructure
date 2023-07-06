@@ -12,25 +12,25 @@ public class Test1 {
         Stack<Integer> stack = new Stack<>();
         //1、遍历这个字符串，如果是数字字符串，入栈。不是，出栈。
 
-        for(int i = 0;i < tokens.length;i++){
+        for (int i = 0; i < tokens.length; i++) {
             String x = tokens[i];
-            if(!isOperations(x)){
+            if (!isOperations(x)) {
                 stack.push(Integer.parseInt(x));
-            }else{
+            } else {
                 int num2 = stack.pop();
                 int num1 = stack.pop();
-                switch(x){
+                switch (x) {
                     case "+":
-                        stack.push(num1+num2);
+                        stack.push(num1 + num2);
                         break;
                     case "-":
-                        stack.push(num1-num2);
+                        stack.push(num1 - num2);
                         break;
                     case "*":
-                        stack.push(num1*num2);
+                        stack.push(num1 * num2);
                         break;
                     case "/":
-                        stack.push(num1/num2);
+                        stack.push(num1 / num2);
                         break;
                     default:
                 }
@@ -39,8 +39,8 @@ public class Test1 {
         return stack.pop();
     }
 
-    private boolean isOperations(String s){
-        if(s.equals("+") || s.equals("-") || s.equals("*") || s.equals("/")){
+    private boolean isOperations(String s) {
+        if (s.equals("+") || s.equals("-") || s.equals("*") || s.equals("/")) {
             return true;
         }
         return false;

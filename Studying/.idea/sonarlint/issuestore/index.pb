@@ -1,6 +1,4 @@
 
->
-src/Test2.java,9\c\9c777542eac3e7581b88482f66bd1547cefcf0ac
 I
 src/MyArray/TestDemo.java,f\2\f29f28b147aa30c522ee5aa2076010098370c902
 J
@@ -19,8 +17,6 @@ c
 3src/MyArraylist/MyArrayListIndexOutOfException.java,0\0\00e0ac5b66f0fb2705bc79495fceeb3fe5f874e8
 ^
 .src/MyArraylist/MyArrayListEmptyException.java,a\5\a51e50d847aa7ee1112bedc555a7efc9acbe61a4
-=
-src/Test.java,a\8\a862b92d10f810e224187403c322cb8e01f5e244
 M
 src/MyArraylist/TestDemo.java,d\f\df3d88a783f9940ec86cd6bc1d6e25c171951fd9
 P
