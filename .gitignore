@@ -37,3 +37,5 @@ yarn.lock
 # egg ignore
 logs/
 run/
+
+/out
